@@ -13,9 +13,16 @@ require 'fizzbuzz'
       expect(fizzbuzz.fizzbuzzer(value)).to eql "Fizz!"
     end
 
-    it "returns \"Fizz!!\" if given number is divisable by five" do
+    it "returns \"Buzz!!\" if given number is divisable by five" do
       fizzbuzz = FizzBuzzer.new
       value = 10
       expect(fizzbuzz.fizzbuzzer(value)).to eql "Buzz!!"
     end
+
+    it "returns \"Fizzbuzz!!!\" if given number is divisable by five and three" do
+      fizzbuzz = FizzBuzzer.new
+      value = 15
+      expect(fizzbuzz.fizzbuzzer(value)).to eql "Fizzbuzz!!!"
+    end
+
   end
